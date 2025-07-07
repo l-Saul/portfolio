@@ -1,0 +1,12 @@
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won’t be available)
+$primary: rgb(21, 67, 96);
+
+.bg-custom {
+  background-color: rgb(21, 67, 96);
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
