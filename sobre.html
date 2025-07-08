@@ -1,35 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre</title>
+
+    <!-- Open Graph Protocol -->
+    <meta property="og:title" content="A brief description">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content= "https://www.mysite">
+    <meta property="og:image" content="image.png">
+    <meta property="og:description" content="A brief description">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Website name">
+
+    <!-- CSS files here -->
     <link rel="stylesheet" href="scss/custom.css">
     <link rel="stylesheet" href="scss/style.css">
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body class="base">
     <div class="sticky-top">
-        <nav class="navbar bg-primary sticky-top navbar-expand-lg" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">LOGO</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Início</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Sobre.html">Sobre</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contato.html">Contato</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark" aria-label="Twelfth navbar example"> 
+            <div class="container-fluid"> 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> 
+                <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10"> 
+                    <ul class="navbar-nav"> 
+                        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="sobre.html">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="skills.html">Habilidades</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                    </ul> 
+                </div> 
+            </div> 
         </nav>
     </div>
 
@@ -70,75 +74,26 @@
             </div>
         </div>
     </header>
-
-    <hr class="linha_horizontal1">
-
-        <div>
-            <h3>HABILIDADES</h3>
-        </div>
-        <div>
-            <div class="habilidades_header">
-                <img class="habilidades_img" src="1_Portfolio_img/Portfolio_linguagens.png" alt="Linguagens de Programação">
-                <h4 class="habilidades_titulo">Linguagens de Programação</h4>
-            </div>
-            <div class="habilidades_descricao">
-                <p>Java</p>
-                <p>Python</p>
-                <p>JavaScript</p>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>VBA</p>
-            </div>
-        </div>
-
-        <div>
-            <div class="habilidades_header">
-                <img class="habilidades_img" src="1_Portfolio_img/Portfolio_frameworks.png" alt="Frameworks e Bibliotecas">
-                <h4 class="habilidades_titulo">Frameworks e Bibliotecas</h4>
-            </div>
-            <div class="habilidades_descricao">
-                <p>React</p>
-                <p>Bootstrap</p>
-                <p>Flask</p>
-            </div>
-        </div>
-
-        <div>
-            <div class="habilidades_header">
-                <img class="habilidades_img" src="1_Portfolio_img/Portfolio_ferramentas.png" alt="Ferramentas">
-                <h4 class="habilidades_titulo">Ferramentas</h4>
-            </div>
-            <div class="habilidades_descricao">
-                <p>Figma</p>
-                <p>Microsoft 365</p>
-            </div>
-        </div>
-        <div>
-            <div class="habilidades_header">
-                <img class="habilidades_img" src="1_Portfolio_img/Portfolio_uxdesign.png" alt="Design">
-                <h4 class="habilidades_titulo">Design</h4>
-            </div>
-            <div class="habilidades_descricao">
-                <p>UX/UI Design</p>
-                <p>Prototyping</p>
-                <p>User research</p>
-                <p>Wireframing</p>
-                <p>Design System</p>
-            </div>
-        </div>
-        <div>
-            <div class="habilidades_header">
-                <img class="habilidades_img" src="1_Portfolio_img/Portfolio_softskills.png" alt="Design">
-                <h4 class="habilidades_titulo">Soft Skills</h4>
-            </div>
-            <div class="habilidades_descricao">
-                <p>Comunicação</p>
-                <p>Trabalho em equipe</p>
-                <p>Liderança</p>
-                <p>Resolução de problemas</p>
-                <p>Gestão do tempo</p>
-                <p>Aprendizado contínuo</p>
-                <p>Organização</p>
-            </div>
-        </div>
     </main>
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 px-3 mt-3 border-top bg-custom"> 
+        <div class="col-md-4 d-flex align-items-center"> 
+            <span class="mb-3 mb-md-0 text-light">© 2025 Luis Henrique Engel Saul.<br>Desenvolvido por Luis Saul</span>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex"> 
+            <li class="ms-3">
+                <a class="text-light" href="mailto:luishsaul@icloud.com" aria-label="mailto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                    </svg>
+                </a>
+            </li> 
+            <li class="ms-3">
+                <a class="text-light" href="https://www.linkedin.com/in/luishesaul/" target="_blank" aria-label="LinkedIn">
+                    <img src="imagens/Portfolio_img/Portfolio_linkedin_logo.png" width="24" height="24" alt="LinkedIn">
+                </a>
+            </li>  
+        </ul> 
+    </footer>
+</body>
+</html>
