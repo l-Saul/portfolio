@@ -1,12 +1,16 @@
 // Option A: Include all of Bootstrap
 
 // Include any default variable overrides here (though functions won’t be available)
-$primary: rgb(21, 67, 96);
+$primary: rgb(255, 107, 61);
+$secondary: rgb(255, 241, 225);
+$success: rgb(21, 67, 96);
+$warning: #FF8159;
 
-.bg-custom {
-  background-color: rgb(21, 67, 96);
+.accordion-body {
+  background-color: rgb(255, 241, 225);
 }
 
-@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import "../assets/bootstrap/scss/bootstrap.scss";
 
 // Then add additional custom code here

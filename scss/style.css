@@ -1,32 +1,9 @@
 /* Ajusta o site geral */
-.base {
-    background-color: white;
-    margin: 0px;
-    padding: 0px;
-    align-items: center;
-}
-
-.linha_horizontal1 {
-    width: 75%;
-    height: 2px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border: none;
-    margin: 40px auto;
-}
-
-.linha_horizontal2 {
-    width: 55%;
-    height: 2px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border: none;
-    margin: 40px auto;
-}
-
-.linha_horizontal3 {
-    width: 75%;
-    height: 2px;
-    background-color: rgba(0, 0, 0, 0.4);
-    border: none;
-    margin: 40px auto;
-    margin-bottom: 5px;
+.foto_perfil {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
 }
