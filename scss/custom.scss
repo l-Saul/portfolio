@@ -1,10 +1,10 @@
 // Option A: Include all of Bootstrap
 
 // Include any default variable overrides here (though functions won’t be available)
-$primary: rgb(255, 107, 61);
-$secondary: rgb(255, 241, 225);
-$success: rgb(21, 67, 96);
-$warning: #FF8159;
+$primary: rgb(21, 67, 96);
+$secondary: rgb(21, 67, 96);
+$success: rgb(255, 241, 225);
+$warning: rgb(255, 107, 61);
 
 .accordion-body {
   background-color: rgb(255, 241, 225);
