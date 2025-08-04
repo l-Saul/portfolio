@@ -59,11 +59,12 @@
             <div class="row justify-content-center">
                 <div class="col-md-10">
                     <hr class="border border-1 opacity-100">
+                    <h2 style="margin-top: 30px;">Projetos Pessoais</h2>
                     <div class="accordion align-items" id="accordionPanelsStayOpenExample">
                         <div class="accordion-item">
                             <h3 class="accordion-header">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                    Site de Controle Financeiro
+                                    Conversor de Cores HEX ↔ RGB
                                 </button>
                             </h3>
                             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
@@ -75,7 +76,7 @@
                         <div class="accordion-item">
                             <h3 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                    Sistema de Leitura de Código de Barras
+                                    Calculadora
                                 </button>
                             </h3>
                             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
@@ -87,7 +88,7 @@
                         <div class="accordion-item">
                             <h3 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                                    Conversor de Cores HEX ↔ RGB
+                                    Cadastro de Código de Barras
                                 </button>
                             </h3>
                             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
@@ -96,15 +97,300 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="margin-bottom: 50px;">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <hr class="border border-1 opacity-100" style="margin-top: 30px;">
+                    <h2 style="margin-top: 30px;">Projetos Acadêmicos</h2>
+                    <div class="accordion align-items" id="accordionPanelsStayOpenExample">
                         <div class="accordion-item">
                             <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
-                                    Sitema de Financiamento
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-uniOne" aria-expanded="true" aria-controls="panelsStayOpen-uniOne">
+                                    Sistema de Gestão Acadêmica - Python & JSON
                                 </button>
                             </h3>
-                            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+                            <div id="panelsStayOpen-uniOne" class="accordion-collapse collapse show">
                                 <div class="accordion-body">
-                                    <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                    <p class="alert alert-danger">Por diretrizes institucionais, não é permitido divulgar integralmente os códigos dos projetos desenvolvidos sob orientação acadêmica.</p>
+                                    <p>Este projeto foi desenvolvido como parte de um trabalho acadêmico, com o objetivo de criar um sistema de linha de comando para gerenciamento de informações acadêmicas, utilizando Python e JSON como banco de dados local.</p>
+                                    <h4>Funcionalidades:</h4>
+                                    <dl>
+                                        <dd>Cadastro, listagem, atualização e exclusão (CRUD) de:</dd>
+                                        <li style="margin-left: .5rem;">Estudantes</li>
+                                        <li style="margin-left: .5rem;">Disciplinas</li>
+                                        <li style="margin-left: .5rem;">Professores</li>
+                                        <li style="margin-left: .5rem;">Turmas</li>
+                                        <li style="margin-left: .5rem;">Matrículas</li>
+                                        <dd style="margin-top: .5rem;">Validação para evitar duplicidades de registros</dd>
+                                        <dd>Armazenamento persistente de dados em JSON</dd>
+                                        <dd>Interface de texto com menus dinâmicos</dd>
+                                    </dl>
+                                    <h4>Tecnologias Utilizadas:</h4>
+                                    <dl>
+                                        <dd>Python 3</dd>
+                                        <dd>Módulo json para persistência de dados</dd>
+                                        <dd>Estruturas de listas e dicionários</dd>
+                                        <dd>Manipulação de arquivos e codificação UTF-8</dd>
+                                        <dd>Boas práticas de tratamento de exceções</dd>
+                                    </dl>
+                                    <h4>Destaques Técnicos:</h4>
+                                    <h5>Persistência de Dados em JSON</h5>
+<pre><code>def ler_json():
+    with open(caminho_json, "r", encoding="utf-8") as f:
+        try:
+            dados = json.load(f)
+        except:
+            dados = {
+            "estudantes": [],
+            "disciplinas": [],
+            "professores": [],
+            "turmas": [],
+            "matriculas": []
+            }
+        return dados
+
+def salvar_json():
+    with open(caminho_json, "w", encoding="utf-8") as f:
+        json.dump(dados, f, ensure_ascii=False)
+</code></pre>
+                                    <h5>Validação de Códigos para Evitar Duplicidade</h5>
+<pre><code>def validacao_codigo(lista, codigo, chave):
+    return any(item[chave] == codigo for item in lista)
+</code></pre>
+                                    <h5>Menu Interativo e Dinâmico</h5>
+<pre><code>def menu(titulo, escolha_menu):
+    if escolha_menu == "opcoes_principais":
+        opcoes = {
+        1: "Estudantes",
+        2: "Disciplinas",
+        3: "Professores",
+        4: "Turmas",
+        5: "Matrículas",
+        9: "Encerrar Chamado"
+        }
+
+    elif escolha_menu == "opcoes_secundarias":
+        opcoes = {
+        1: "Incluir",
+        2: "Listar",
+        3: "Atualizar",
+        4: "Excluir",
+        9: "Voltar",
+        }
+        
+    print(f"--- {titulo} ---")
+    for opcao_cod, opcao_nome in opcoes.items():
+        print(f"({opcao_cod}) {opcao_nome}")
+    print("-" * (len(titulo) + 8))
+
+    try:
+        escolha_usuario = int(input("Digite o número correspondente à opção desejada: "))
+        if escolha_usuario in opcoes:
+            print(f"Opção selecionada: {opcoes[escolha_usuario]}")
+            return escolha_usuario
+        else:
+            print("Erro: Opção inválida! Digite um número existente no menu.")
+    except ValueError:
+        print("Erro: Opção inválida! Digite um número existente no menu.")
+</code></pre>
+                                    <h5>Exemplo de Inclusão com Validação e Tratamento de Erros</h5>
+<pre><code>def incluir(categoria):
+    if categoria == 1:
+        while True:
+            try:
+                nome_estudantes = input("Digite o NOME: ")
+                cod_estudantes = int(input("Digite o CÓDIGO: "))
+                cpf_estudantes = input("Digite o CPF: ")
+                if validacao_codigo(estudantes, cod_estudantes, "CódigoEstudantes"):
+                    print("Erro: Código já existente.")
+                    continue
+                dicionario_estudantes = {"CódigoEstudantes": cod_estudantes, "NomeEstudantes": nome_estudantes, "CpfEstudantes": cpf_estudantes}
+                estudantes.append(dicionario_estudantes)
+                salvar_json()
+                print("Estudante cadastrado com sucesso!" )
+            except ValueError:
+                print("Erro: Código deve ser um número inteiro")
+                continue
+            break
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-uniTwo" aria-expanded="false" aria-controls="panelsStayOpen-uniTwo">
+                                    Sistema de Cálculo de Financiamentos Imobiliários - Java
+                                </button>
+                            </h3>
+                            <div id="panelsStayOpen-uniTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p class="alert alert-danger">Por diretrizes institucionais, não é permitido divulgar integralmente os códigos dos projetos desenvolvidos sob orientação acadêmica.</p>
+                                    <p>Projeto orientado a objetos desenvolvido em Java, com foco no cálculo de financiamentos para diferentes tipos de imóveis (Casa, Apartamento e Terreno), utilizando herança, polimorfismo e tratamento de exceções.</p>
+                                    <p>O projeto completo contém arquitetura modular com pacotes separados por função (modelo, util, main), mas, por restrições acadêmicas, apenas trechos selecionados estão sendo apresentados.</p>
+                                    <h4>Funcionalidades:</h4>
+                                    <dl>
+                                        <dd>Cadastro e cálculo de financiamentos para diferentes tipos de imóveis</dd>
+                                        <dd>Implementação de regras específicas para cada tipo de imóvel</dd>
+                                        <dd>Persistência de dados com arquivos texto e serialização binária</dd>
+                                        <dd>Interface de entrada de dados com validação e tratamento de erros</dd>
+                                        <dd>Exceções personalizadas para regras de negócio</dd>
+                                    </dl>
+                                    <h4>Tecnologias Utilizadas:</h4>
+                                    <dl>
+                                        <dd>Java 17</dd>
+                                        <dd>Programação Orientada a Objetos (POO)</dd>
+                                        <dd>Leitura e escrita em arquivos (FileReader, FileWriter, ObjectInputStream, ObjectOutputStream)</dd>
+                                        <dd>Tratamento de exceções</dd>
+                                        <dd>Polimorfismo e classes abstratas</dd>
+                                    </dl>
+                                    <h4>Destaques Técnicos:</h4>
+                                    <h5>Arquitetura Modular</h5>
+<pre><code>package modelo;
+
+import util.AumentoMaiorDoQueJurosException;
+
+public class Casa extends Financiamento{
+    private final double areaConstruida;
+    private final double tamanhoTerreno;
+    private final String nomeClasse = this.getClass().getSimpleName();
+
+    public Casa(double valorImovel, int prazoFinanciamento, double taxaJurosAnual, double areaConstruida, double tamanhoTerreno){
+        super(valorImovel, prazoFinanciamento, taxaJurosAnual);
+        this.areaConstruida = areaConstruida;
+        this.tamanhoTerreno = tamanhoTerreno;
+    }
+(...)
+}
+</code></pre>
+                                    <h5>Classe Abstrata com Polimorfismo</h5>
+<pre><code>package modelo;
+
+import java.io.Serializable;
+
+public abstract class Financiamento implements Serializable{
+    protected final double valorImovel;
+    protected final int prazoFinanciamento;
+    protected final double taxaJurosAnual;
+
+    public Financiamento(double valorImovel, int prazoFinanciamento, double taxaJurosAnual){
+        this.valorImovel = valorImovel;
+        this.prazoFinanciamento = prazoFinanciamento;
+        this.taxaJurosAnual = taxaJurosAnual;
+    }
+
+    public double getValorImovel(){
+        return this.valorImovel;
+    }
+
+    public int getPrazoFinanciamento(){
+        return this.prazoFinanciamento;
+    }
+
+    public double getTaxaJurosAnual(){
+        return this.taxaJurosAnual;
+    }
+
+    public abstract double calcularPagamentoMensal();
+    public abstract double calcularTotalPagamento();
+    public abstract void dadosFinanciamento();
+}
+</code></pre>
+                                    <h5>Regras de Negócio Específicas por Tipo de Imóvel</h5>
+                                    <p><strong>Terreno</strong></p>
+<pre><code>@Override
+    public double calcularPagamentoMensal(){
+        double pagamentoMensal = (this.valorImovel / (this.prazoFinanciamento * 12)) * (1 + (this.taxaJurosAnual / 12));
+        return pagamentoMensal * 1.02;
+    }
+</code></pre>
+                                    <p><strong>Casa</strong></p>
+<pre><code>@Override
+    public double calcularPagamentoMensal(){
+        double valorJurosMensal = ((this.taxaJurosAnual / 12) * this.valorImovel);
+        double valorSeguroMensal = 80;
+
+        try {
+            validarJuros(valorJurosMensal, valorSeguroMensal);
+        } catch (AumentoMaiorDoQueJurosException e) {
+            valorSeguroMensal = valorJurosMensal;
+        }
+
+        double pagamentoMensal = (this.valorImovel / (this.prazoFinanciamento * 12)) * (1 + (this.taxaJurosAnual / 12));
+        return pagamentoMensal + valorSeguroMensal;
+    }
+</code></pre>
+                                    <p><strong>Apartamento</strong></p>
+<pre><code>@Override
+    public double calcularPagamentoMensal(){
+        double jurosMensal = taxaJurosAnual / 12;
+        int prazoMensal = prazoFinanciamento * 12;
+        double novaFormula = (valorImovel * jurosMensal * Math.pow((1 + jurosMensal), prazoMensal)) / (Math.pow((1 + jurosMensal), prazoMensal) - 1);
+        return novaFormula;
+    }
+</code></pre>
+                                    <h5>Exceções Personalizadas para Regras de Negócio</h5>
+<pre><code>package util;
+
+public class AumentoMaiorDoQueJurosException extends Exception {
+
+    public AumentoMaiorDoQueJurosException(String msg){
+        super(msg);
+    }
+
+}
+</code></pre>
+                                    <h5>Persistência de Dados com Arquivos Texto e Serialização</h5>
+                                    <p><strong>.txt</strong></p>
+<pre><code>//escrita
+try (FileWriter escritor = new FileWriter("dados.txt")) {
+    escritor.write(novoFinanciamento1.toString() + "\n");
+    escritor.write(novoFinanciamento2.toString() + "\n");
+    escritor.write(novoFinanciamento3.toString() + "\n");
+    escritor.write(novoFinanciamento4.toString() + "\n");
+    escritor.write(novoFinanciamento5.toString() + "\n");
+} catch (IOException e){
+    System.out.println("Erro ao escrever no arquivo: " + e.getMessage());
+}
+
+//leitura
+try (FileReader leitorArquivos = new FileReader("dados.txt");
+BufferedReader leitor = new BufferedReader(leitorArquivos)){
+    String linha;
+    while ((linha = leitor.readLine()) != null) {
+        System.out.println(linha); // ou processa a linha
+    }
+} catch (IOException e){
+    System.out.println("Erro ao acessar o arquivo: " + e.getMessage());
+}
+</code></pre>
+                                    <p><strong>Serializable</strong></p>
+<pre><code>//object output stream
+try (ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("financiamentos.test"))){
+    outputStream.writeObject(listaFinanciamentos);
+    System.out.println("Lista salva com sucesso.");
+} catch (IOException e){
+    e.printStackTrace();
+}
+
+//object input stream
+ArrayList<Financiamento> listaLida = null;
+try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("financiamentos.test"))){
+    listaLida = (ArrayList<Financiamento>) inputStream.readObject();
+    System.out.println("Lista lida com sucesso.");
+    if (listaLida != null) {
+    for (Financiamento f : listaLida) {
+        System.out.println(f.toString());
+        }
+    }
+} catch (IOException | ClassNotFoundException e){
+    e.printStackTrace();
+}
+</code></pre>
                                 </div>
                             </div>
                         </div>
