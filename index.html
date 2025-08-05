@@ -74,7 +74,54 @@
                             </h3>
                             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                                 <div class="accordion-body">
-                                    <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                    <p class="alert alert-info">Acessar o site aqui 
+                                        <a href="#" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">https://l-saul.github.io/colorconverter_saul/</a>
+                                    </p>
+                                    <p>Ferramenta online para converter cores HEX ↔ RGB de forma rápida, responsiva e intuitiva. Criada para facilitar o trabalho de desenvolvedores e designers, permitindo testes de cores diretamente no navegador com visualização instantânea do resultado.</p>
+                                    <p>A interface é simples, moderna (utilizando Tailwind CSS) e responsiva, oferecendo uma experiência amigável tanto no desktop quanto no mobile.</p>
+                                    <h4>Funcionalidades:</h4>
+                                    <dl>
+                                        <dd>Conversão HEX → RGB:</dd>
+                                        <li style="margin-left: .5rem;">Insira um código HEX válido e obtenha o equivalente em RGB</li>
+                                        <li style="margin-left: .5rem;">Exibição da cor de fundo correspondente</li>
+                                        <li style="margin-left: .5rem;">Ajuste automático da cor do texto para manter o contraste</li>
+                                        <dd style="margin-top: .5rem;">Conversão RGB → HEX:</dd>
+                                        <li style="margin-left: .5rem;">Informe os valores de R, G e B (0-255) e obtenha o equivalente em HEX</li>
+                                        <li style="margin-left: .5rem;">Visualização instantânea da cor gerada</li>
+                                        <li style="margin-left: .5rem;">Ajuste automático da cor do texto para manter legibilidade</li>
+                                        <dd style="margin-top: .5rem;">Validações em tempo real para evitar entradas inválidas</dd>
+                                        <dd>Design responsivo para uso em qualquer dispositivo</dd>
+                                    </dl>
+                                    <h4>Tecnologias Utilizadas:</h4>
+                                    <dl>
+                                        <dd>HTML5 - Estrutura do projeto.</dd>
+                                        <dd>CSS3 (com Tailwind CSS) - Estilização e layout responsivo.</dd>
+                                        <dd>JavaScript (Vanilla) - Lógica de conversão e manipulação do DOM.</dd>
+                                    </dl>
+                                    <h4>Destaques Técnicos:</h4>
+                                    <h5>Validação de entrada HEX com regex</h5>
+<pre><code>if (!/^#?[0-9A-Fa-f]{6}$/.test(hex)) {
+    output.textContent = "Invalid HEX code.";
+    output.style.backgroundColor = "transparent";
+    return;
+}
+</code></pre>
+                                    <h5>Cálculo dinâmico de contraste para texto legível</h5>
+<pre><code>output.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+output.style.color = (r*0.299 + g*0.587 + b*0.114) > 150 ? "black" : "white";
+</code></pre>
+                                    <h5>Conversão HEX → RGB usando <code>parseInt</code> e <code>substring</code></h5>
+<pre><code>let cleanHex = hex.replace('#', '');
+let r = parseInt(cleanHex.substring(0, 2), 16);
+let g = parseInt(cleanHex.substring(2, 4), 16);
+let b = parseInt(cleanHex.substring(4, 6), 16);
+</code></pre>
+                                    <h5>Conversão RGB → HEX com <code>toString(16)</code> e <code>padStart</code></h5>
+<pre><code>const hex = "#" + 
+    r.toString(16).padStart(2, '0') + 
+    g.toString(16).padStart(2, '0') + 
+    b.toString(16).padStart(2, '0');
+</code></pre>
                                 </div>
                             </div>
                         </div>
