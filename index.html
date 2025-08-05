@@ -67,14 +67,14 @@
                     <h2 style="margin-top: 30px;">Projetos Pessoais</h2>
                     <div class="accordion align-items" id="accordionPanelsPessoais">
                         <div class="accordion-item">
-                            <h3 class="accordion-header">
+                            <h3 class="accordion-header ">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                                     Conversor de Cores HEX ↔ RGB
                                 </button>
                             </h3>
                             <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
                                 <div class="accordion-body">
-                                    <p class="alert alert-info">Acessar o site aqui 
+                                    <p class="alert alert-info">Confira a aplicação disponível em 
                                         <a href="#" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">https://l-saul.github.io/colorconverter_saul/</a>
                                     </p>
                                     <p>Ferramenta online para converter cores HEX ↔ RGB de forma rápida, responsiva e intuitiva. Criada para facilitar o trabalho de desenvolvedores e designers, permitindo testes de cores diretamente no navegador com visualização instantânea do resultado.</p>
@@ -122,6 +122,11 @@ let b = parseInt(cleanHex.substring(4, 6), 16);
     g.toString(16).padStart(2, '0') + 
     b.toString(16).padStart(2, '0');
 </code></pre>
+                                    <h4>Galeria:</h4>
+                                    <p>Visão inicial da aplicação ao ser aberta.</p>
+                                    <img class="img-fluid rounded img-thumbnail" src="imagens/ColorConverter_img/CC_01.png" alt="">
+                                    <p style="margin-top: 20px;">Resultado após a inserção dos valores para conversão.</p>
+                                    <img class="img-fluid rounded img-thumbnail" src="imagens/ColorConverter_img/CC_02.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -162,11 +167,11 @@ let b = parseInt(cleanHex.substring(4, 6), 16);
                     <div class="accordion align-items" id="accordionPanelsAcademicos">
                         <div class="accordion-item">
                             <h3 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-uniOne" aria-expanded="true" aria-controls="panelsStayOpen-uniOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-uniOne" aria-expanded="true" aria-controls="panelsStayOpen-uniOne">
                                     Sistema de Gestão Acadêmica - Python & JSON
                                 </button>
                             </h3>
-                            <div id="panelsStayOpen-uniOne" class="accordion-collapse collapse show">
+                            <div id="panelsStayOpen-uniOne" class="accordion-collapse collapse">
                                 <div class="accordion-body">
                                     <p class="alert alert-danger">Por diretrizes institucionais, não é permitido divulgar integralmente os códigos dos projetos desenvolvidos sob orientação acadêmica.</p>
                                     <p>Este projeto foi desenvolvido como parte de um trabalho acadêmico, com o objetivo de criar um sistema de linha de comando para gerenciamento de informações acadêmicas, utilizando Python e JSON como banco de dados local.</p>
