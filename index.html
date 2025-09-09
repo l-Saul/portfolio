@@ -135,16 +135,30 @@ let b = parseInt(cleanHex.substring(4, 6), 16);
                         <div class="accordion-item">
                             <h3 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                    Gerador de Código de Barras
+                                    Site de controle financeiros
                                 </button>
                             </h3>
                             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
                                 <div class="accordion-body">
-                                    <p class="alert alert-info">Confira a aplicação disponível em 
-                                        <a href="https://l-saul.github.io/barcode_saul/" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank" rel="noopener noreferrer">https://l-saul.github.io/colorconverter_saul/</a>
-                                    </p>
+                                    <p class="alert alert-danger">Documentação em atualização</p>
                                     <h4>Funcionalidades:</h4>
+                                    <dl>
+                                        <dd>Cadastro de usuários</dd>
+                                        <dd>Lançamento e categorização de receitas e despesas</dd>
+                                        <dd>Persistência de dados em MySQL</dd>
+                                        <dd>Painel de controle com visão geral do saldo e fluxo de caixa</dd>
+                                        <dd>Geração de gráficos e relatórios financeiros interativos</dd>
+                                        <dd>Interface simplificada, responsiva e com UX moderna</dd>
+                                    </dl>
                                     <h4>Tecnologias Utilizadas:</h4>
+                                    <dl>
+                                        <dd>HTML 5</dd>
+                                        <dd>React.js</dd>
+                                        <dd>Tailwind.css</dd>
+                                        <dd>MySQL</dd>
+                                        <dd>JavaScript</dd>
+                                        <dd>Next.js</dd>
+                                    </dl>
                                     <h4>Destaques Técnicos:</h4>
                                 </div>
                             </div>
@@ -443,6 +457,205 @@ try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("
     e.printStackTrace();
 }
 </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-unithree" aria-expanded="false" aria-controls="panelsStayOpen-unithree">
+                                    Integração ESP32, Sensor DHT11, Relé e Plataforma ThingSpeak - IOT
+                                </button>
+                            </h3>
+                            <div id="panelsStayOpen-unithree" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p class="alert alert-danger">Por diretrizes institucionais, não é permitido divulgar integralmente os códigos dos projetos desenvolvidos sob orientação acadêmica.</p>
+                                    <p>Este projeto foi desenvolvido como parte de uma atividade acadêmica, com o objetivo de configurar, programar e validar um sistema baseado no microcontrolador ESP32, utilizando o sensor DHT11 para coleta de dados e um relé para acionamento automatizado, com envio das informações para a plataforma ThingSpeak.</p>
+                                    <h4>Funcionalidades:</h4>
+                                    <dl>
+                                        <dd>Coleta de Dados Ambientais, com o ESP32 é possível realizar leituras periódicas do sensor DHT11, obtendo valores de temperatura e umidade relativa do ar.</dd>
+                                        <dd>Os dados coletados são avaliados em tempo real pelo microcontrolador. Com base em condições pré-definidas, como se temperatura > 31 °C ou umidade > 70%, o relé é acionado automaticamente</dd>
+                                        <dd>O ESP32 transmite os dados coletados para a plataforma ThingSpeak, possibilitando o armazenamento, visualização e análise em tempo real por meio de dashboards.</dd>
+                                        <dd>O sistema combina sensores, atuadores e comunicação sem fio em um único ambiente, servindo como protótipo para aplicações de automação residencial, monitoramento climático e controle inteligente de dispositivos.</dd>
+                                    </dl>
+                                    <h4>Tecnologias Utilizadas:</h4>
+                                    <dl>
+                                        <dd>Máquina Virtual em Linux - ambiente de desenvolvimento</dd>
+                                        <dd>Thonny IDE - programação e configuração do ESP32</dd>
+                                        <dd>ESP32 - Microcontrolador</dd>
+                                        <dd>MicroPython - execução no ESP32</dd>
+                                        <dd>Sensor DHT11 - coleta de temperatura e umidade</dd>
+                                        <dd>Relé - acionamento automático</dd>
+                                        <dd>ThingSpeak - armazenamento e visualização dos dados coletados</dd>
+                                    </dl>
+                                    <h4>Destaques Técnicos:</h4>
+                                    <h5>Persistência e Envio de Dados</h5>
+                                    <p>ESP32 configurado em Python e o envio de dados coletados para a API do ThingSpeak.</p>
+                                    <h5>Funcionamento básico do microcontrolador</h5>
+<pre><code>import dht
+import machine
+import time
+
+d=dht.DHT(machine.Pin(4))
+
+while True:
+    d.measure()
+    print("Temp={}  Umid{}".format(d.temperature(), d.humidity()))
+    time sleep(5)
+</code></pre>
+                                    <h5>Validação de Condições para o Relé</h5>
+<pre><code>if temperatura > 31 or umidade > 70:
+    rele.on()
+else:
+    rele.off()
+</code></pre>
+                                    <h4>Galeria:</h4>
+                                    <p>Conexão do microcontrolador com o DHT11:</p>
+                                    <img class="img-fluid rounded img-thumbnail" src="imagens/Microcontrolador_img/IOT_Microcontrolador.jpeg" alt="">
+                                    <img class="img-fluid rounded img-thumbnail" src="imagens/Microcontrolador_img/IOT_Conexao.png" alt="">
+                                    <p style="margin-top: 20px;">Maquina virtual em Linux com o funcionamento da Thonny IDE:</p>
+                                    <img class="img-fluid rounded img-thumbnail" src="imagens/Microcontrolador_img/IOT_MicroPython.jpg" alt="">
+                                    <p style="margin-top: 20px;">Primeira versão do funcionamento do sistema, nota que a elevação de humidade e temperatura e dada ao segurar o DHT11 com a mão:</p>
+                                    <img class="img-fluid rounded img-thumbnail" src="imagens/Microcontrolador_img/IOT_ESP32.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-uniFour" aria-expanded="false" aria-controls="panelsStayOpen-uniFour">
+                                    Banco de dados para Lanchonete e Loja de Vinhos - MySQL
+                                </button>
+                            </h3>
+                            <div id="panelsStayOpen-uniFour" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <p class="alert alert-danger">Por diretrizes institucionais, não é permitido divulgar integralmente os códigos dos projetos desenvolvidos sob orientação acadêmica.</p>
+                                    <p>Este projeto foi desenvolvido como parte de uma atividade acadêmica, com o objetivo de consolidar conhecimentos em modelagem de banco de dados relacional, abrangendo desde a construção dos modelos conceitual, lógico e físico, até a inserção de dados e consultas SQL com integridade referencial.</p>
+                                    <h4>Funcionalidades:</h4>
+                                    <dl>
+                                        <dd>O sistema permite o cadastro estruturado de clientes, endereços, sanduíches e entregadores, garantindo organização e integridade das informações. Ele realiza a gestão completa dos pedidos, registrando data de emissão, status (em preparação, em entrega ou entregue) e associando cada pedido ao cliente correspondente. Cada pedido pode conter múltiplos itens do cardápio, com suas quantidades registradas de forma detalhada. O sistema também permite a atribuição de entregadores aos pedidos em andamento e oferece consultas para monitorar os pedidos em preparação, proporcionando controle completo sobre o ciclo de atendimento e entrega.</dd>
+                                        <dd>O sistema de gestão de vinhos permite cadastrar de forma organizada as informações sobre vinhos, vinícolas e regiões. Cada vinho possui nome, tipo, ano de produção e descrição, estando associado a uma vinícola específica. As vinícolas, por sua vez, possuem cadastro completo com nome, descrição, telefone, email e vínculo a uma região determinada, que também mantém nome e descrição. Essa estrutura garante integridade referencial e permite consultas que relacionam vinhos, vinícolas e regiões, possibilitando análises completas sobre o produto e sua origem. Além disso, o sistema permite o controle de acessos por usuários com permissões restritas, garantindo segurança e limitação de consultas quando necessário, como no caso do usuário Somellier.</dd>
+                                    </dl>
+                                    <h4>Tecnologias Utilizadas:</h4>
+                                    <dl>
+                                        <dd>BrModelo - Modelagem Conceitual</dd>
+                                        <dd>MySQL Workbench - Modelagem Lógica</dd>
+                                        <dd>MySQL - Modelagem Física e Implementação do Banco</dd>
+                                        <dd>SQL - Criação de tabelas, inserções e consultas</dd>
+                                    </dl>
+                                    <h4>Destaques Técnicos:</h4>
+                                    <h5>Criação das tabelas</h5>
+<pre><code>-- Tabela de Entregadores
+CREATE TABLE mydb.Entregadores (
+idEntregadores INT AUTO_INCREMENT,
+Nome VARCHAR(100) NOT NULL,
+Telefone CHAR(11) NOT NULL,
+PRIMARY KEY(idEntregadores)
+);
+
+-- Tabela de Enderecos dos clientes
+CREATE TABLE mydb.Enderecos (
+idEnderecos INT AUTO_INCREMENT,
+CEP CHAR(8) UNIQUE NOT NULL,
+Rua VARCHAR(100) NOT NULL,
+Numero VARCHAR(10) NOT NULL,
+Complemento VARCHAR(50),
+Bairro VARCHAR(50) NOT NULL,
+Cidade VARCHAR(50) NOT NULL,
+UF CHAR(2) NOT NULL,
+PRIMARY KEY(idEnderecos)
+);
+
+-- Tabela de Clientes
+CREATE TABLE mydb.Clientes (
+idClientes INT AUTO_INCREMENT,
+Nome VARCHAR(100) NOT NULL,
+Telefone CHAR(11) NOT NULL,
+idEndereco INT NOT NULL,
+PRIMARY KEY (idClientes),
+FOREIGN KEY (idEndereco) REFERENCES mydb.Enderecos(idEnderecos)
+);
+
+-- Tabela de Pedidos
+CREATE TABLE mydb.Pedidos (
+idPedidos INT AUTO_INCREMENT,
+DataEmissao DATETIME NOT NULL,
+Situacao ENUM('0', '1', '2') NOT NULL,
+idCliente INT NOT NULL,
+idEntregador INT,
+PRIMARY KEY (idPedidos),
+FOREIGN KEY (idCliente) REFERENCES mydb.Clientes(idClientes),
+FOREIGN KEY (idEntregador) REFERENCES mydb.Entregadores(idEntregadores)
+);
+
+-- Tabela de Sanduiches
+CREATE TABLE mydb.Sanduiches (
+idSanduiches INT AUTO_INCREMENT,
+Nome VARCHAR(100) NOT NULL,
+Preco DECIMAL(5,2) UNSIGNED NOT NULL,
+PRIMARY KEY(idSanduiches)
+);
+
+-- Tabela dos Itens que compoem o pedido
+CREATE TABLE mydb.PedidoItens (
+idPedido INT,
+idSanduiche INT,
+Quantidade TINYINT UNSIGNED NOT NULL,
+PRIMARY KEY(idPedido, idSanduiche),
+FOREIGN KEY (idPedido) REFERENCES mydb.Pedidos(idPedidos),
+FOREIGN KEY (idSanduiche) REFERENCES mydb.Sanduiches(idSanduiches)
+);
+</code></pre>
+                                    <h5>Inserção de dados (resumido)</h5>
+<pre><code>INSERT INTO mydb.Entregadores (Nome, Telefone) VALUES
+('Jose Aldo', '41909878656'),
+('Carlos Macedo', '41998877665');
+
+INSERT INTO mydb.Enderecos (CEP, Rua, Numero, Complemento, Bairro, Cidade, UF) VALUES
+('80010000', 'Rua das Flores', 101, 'Apto 201', 'Centro', 'Curitiba', 'PR'),
+('80210020', 'Avenida Brasil', 456, 'Sala 12', 'Batel', 'Curitiba', 'PR'),
+('80730050', 'Travessa da Paz', 789, NULL, 'Portão', 'Curitiba', 'PR');
+
+INSERT INTO mydb.Clientes (Nome, Telefone, idEndereco) VALUES
+('Teobaldo Aguiar', '41762378965','2'),
+('Cristiana Silva', '41975003240','3'),
+('Marcelino Costa Curta','41983465832','1');
+
+INSERT INTO mydb.Pedidos (DataEmissao, Situacao, idCliente, idEntregador) VALUES
+('2025-08-15 10:00:00', '2', 1, 1),
+('2025-08-16 11:15:00', '2', 1, 2),
+('2025-08-17 12:30:00', '2', 3, 1),
+('2025-08-18 13:45:00', '0', 1, NULL),
+('2025-08-18 14:50:00', '0', 3, NULL),
+('2025-08-18 15:20:00', '0', 2, NULL);
+
+INSERT INTO mydb.Sanduiches (Nome, Preco) VALUES
+('Sanduíche de carne assada', 9.99),
+('Sanduíche de atum', 14.90),
+('Wrap vegetariano com homus', 14.90),
+('Sanduíche de salada de frango', 24.90);
+
+INSERT INTO mydb.PedidoItens VALUES
+(1, 1, 2),
+(1, 2, 1),
+(2, 3, 1),
+(2, 4, 2),
+(3, 1, 1),
+(3, 3, 1),
+(4, 2, 2),
+(4, 4, 1),
+(5, 1, 1),
+(6, 3, 2);
+</code></pre>
+                                    <h5>Atualização dos dados</h5>
+<pre><code>UPDATE mydb.Pedidos SET Situacao = '1', idEntregador = 1 WHERE idPedidos = 4;
+</code></pre>
+                                    <h5>Seleção e filtragem dos dados com INNER JOIN</h5>
+<pre><code>SELECT x.*, y.idSanduiche, y.Quantidade FROM mydb.Pedidos x INNER JOIN mydb.PedidoItens y ON x.idPedidos = y.idPedido WHERE Situacao = '0';
+</code></pre>
+                                    <h4>Galeria:</h4>
+                                    <p>Modelagem Conceitual da Lanchonete:</p>
+                                    <img class="img-fluid rounded img-thumbnail" src="imagens/MySQL_img/BrModelo.jpeg" alt="">
+                                    <p style="margin-top: 20px;">Modelagem Lógica da Lanchonete:</p>
+                                    <img class="img-fluid rounded img-thumbnail" src="imagens/MySQL_img/ModeloLogico_MySQL.jpeg" alt="">
                                 </div>
                             </div>
                         </div>
