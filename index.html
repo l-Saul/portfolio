@@ -140,7 +140,6 @@ let b = parseInt(cleanHex.substring(4, 6), 16);
                             </h3>
                             <div id="panelsStayOpen-uniOne" class="accordion-collapse collapse">
                                 <div class="accordion-body">
-                                    <p class="alert alert-danger">Por diretrizes institucionais, não é permitido divulgar integralmente os códigos dos projetos desenvolvidos sob orientação acadêmica.</p>
                                     <p>Este projeto foi desenvolvido como parte de um trabalho acadêmico, com o objetivo de criar um sistema de linha de comando para gerenciamento de informações acadêmicas, utilizando Python e JSON como banco de dados local.</p>
                                     <h4>Funcionalidades:</h4>
                                     <dl>
@@ -253,7 +252,6 @@ def salvar_json():
                             </h3>
                             <div id="panelsStayOpen-uniTwo" class="accordion-collapse collapse">
                                 <div class="accordion-body">
-                                    <p class="alert alert-danger">Por diretrizes institucionais, não é permitido divulgar integralmente os códigos dos projetos desenvolvidos sob orientação acadêmica.</p>
                                     <p>Projeto orientado a objetos desenvolvido em Java, com foco no cálculo de financiamentos para diferentes tipos de imóveis (Casa, Apartamento e Terreno), utilizando herança, polimorfismo e tratamento de exceções.</p>
                                     <p>O projeto completo contém arquitetura modular com pacotes separados por função (modelo, util, main), mas, por restrições acadêmicas, apenas trechos selecionados estão sendo apresentados.</p>
                                     <h4>Funcionalidades:</h4>
@@ -426,7 +424,6 @@ try (ObjectInputStream inputStream = new ObjectInputStream(new FileInputStream("
                             </h3>
                             <div id="panelsStayOpen-unithree" class="accordion-collapse collapse">
                                 <div class="accordion-body">
-                                    <p class="alert alert-danger">Por diretrizes institucionais, não é permitido divulgar integralmente os códigos dos projetos desenvolvidos sob orientação acadêmica.</p>
                                     <p>Este projeto foi desenvolvido como parte de uma atividade acadêmica, com o objetivo de configurar, programar e validar um sistema baseado no microcontrolador ESP32, utilizando o sensor DHT11 para coleta de dados e um relé para acionamento automatizado, com envio das informações para a plataforma ThingSpeak.</p>
                                     <h4>Funcionalidades:</h4>
                                     <dl>
@@ -485,7 +482,6 @@ else:
                             </h3>
                             <div id="panelsStayOpen-uniFour" class="accordion-collapse collapse">
                                 <div class="accordion-body">
-                                    <p class="alert alert-danger">Por diretrizes institucionais, não é permitido divulgar integralmente os códigos dos projetos desenvolvidos sob orientação acadêmica.</p>
                                     <p>Este projeto foi desenvolvido como parte de uma atividade acadêmica, com o objetivo de consolidar conhecimentos em modelagem de banco de dados relacional, abrangendo desde a construção dos modelos conceitual, lógico e físico, até a inserção de dados e consultas SQL com integridade referencial.</p>
                                     <h4>Funcionalidades:</h4>
                                     <dl>
@@ -608,6 +604,14 @@ INSERT INTO mydb.PedidoItens VALUES
 </code></pre>
                                     <h5>Seleção e filtragem dos dados com INNER JOIN</h5>
 <pre><code>SELECT x.*, y.idSanduiche, y.Quantidade FROM mydb.Pedidos x INNER JOIN mydb.PedidoItens y ON x.idPedidos = y.idPedido WHERE Situacao = '0';
+</code></pre>
+                                    <h5>Criar usuarios e limitar acessos</h5>
+<pre><code>CREATE USER 'user'@'localhost' IDENTIFIED BY '@loja123';
+
+GRANT SELECT ON loja.Vinho TO 'user'@'localhost';
+GRANT SELECT (cod, nome) ON loja.Vinicola  TO 'user'@'localhost';
+
+ALTER USER 'user'@'localhost' WITH MAX_QUERIES_PER_HOUR 40;
 </code></pre>
                                     <h4>Galeria:</h4>
                                     <p>Modelagem Conceitual da Lanchonete:</p>
